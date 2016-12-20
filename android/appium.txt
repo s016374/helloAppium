@@ -1,0 +1,4 @@
+[caps]
+platformName = "android"
+app = "./build/dealingMatrix-debug.apk"
+deviceName = "Android"
