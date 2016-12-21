@@ -28,11 +28,11 @@ RSpec.describe "Regression testing for DM android client" do
 
     it "login" do
       id('rl_user_name').click
-      id('rl_user_name').send_keys "test_364478262"
+      id('rl_user_name').send_keys "lishenyang"
       id('rl_password').click
-      id('rl_password').send_keys "123456"
+      id('rl_password').send_keys "125800"
       button(1).click
-      # expect(exists { id('tv_bra_title') }).to be true
+      expect(exists { id('tv_bra_title') }).to be true
     end
 
     # seems an issue
@@ -80,9 +80,8 @@ RSpec.describe "Regression testing for DM android client" do
     end
 
     it "message" do
-      id('ivMessage').click
-      id('tv_title').click
-      expect(id('textView1').text).to eq "系统消息"
+      id('rlMessage').click
+      expect(text('搜索')).to_not be_nil
       2.times { back }
     end
 
