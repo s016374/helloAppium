@@ -1,6 +1,6 @@
 # Automation testing for regression iOS and android app
 
-## appium (ruby)
-## rspec
-## rake
-## support natived simulator and sauce labs
+## get start
+bundle install
+bundle exec rake pull
+bundle exec rake android
