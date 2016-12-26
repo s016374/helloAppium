@@ -1,4 +1,5 @@
 # Rakefile
+require 'open-uri'
 
 desc 'Run iOS testing'
 task :ios do
@@ -10,4 +11,10 @@ desc 'Run android testing'
 task :android do
   Dir.chdir 'android'
   exec 'bundle exec rspec -f html -o report.html'
+end
+
+desc 'Download release.apk'
+task :pull, :download_url do |t, args|
+  download = open(args[:download_url])
+  IO.copy_stream(download, './android/build/dealingMatrix-release.apk')
 end
