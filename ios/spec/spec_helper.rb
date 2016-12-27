@@ -37,12 +37,12 @@ promote_methods
 
 RSpec.configure do |config|
   # new a driver
-  config.before(:each) do
+  config.before(:suite) do
     $driver.start_driver
   end
 
   # close the driver
-  config.after(:each) do
+  config.after(:suite) do
     driver_quit
   end
 end

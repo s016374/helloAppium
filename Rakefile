@@ -14,8 +14,13 @@ task :android do
 end
 
 desc 'Download release.apk'
-task :pull, :download_url do |t, args|
+task :pull_apk, :download_url do |t, args|
   args.with_defaults(download_url: 'http://apk.hiapk.com/appdown/com.innodealing.activity')
   download = open(args[:download_url])
   IO.copy_stream(download, './android/build/dealingMatrix-release.apk')
+end
+
+desc 'svn checkout ad hoc ios build'
+task :pull_app, :svn_url do |t, args|
+  # TODO
 end

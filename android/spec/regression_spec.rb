@@ -56,7 +56,7 @@ RSpec.describe "Regression testing for DM android client" do
     it "enter news and check list" do
       id('rlTabFour').click
       expect(id('tvWebDataOrInfo').text).to eq "资讯"
-      find_elements(:class, 'android.view.View').length > 20
+      expect(find_elements(:class, 'android.view.View').length).to be > 20
     end
   end
 
@@ -64,7 +64,7 @@ RSpec.describe "Regression testing for DM android client" do
     it "enter data and check page" do
       id('rlTabTwo').click
       buttons.each { |btn| btn.click }
-      find_elements(:class, 'android.view.View').length > 10
+      expect(find_elements(:class, 'android.view.View').length).to be > 10
     end
   end
 

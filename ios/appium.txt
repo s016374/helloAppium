@@ -3,7 +3,7 @@ appium-version = "1.6.3"
 platformName = "ios"
 platformVersion = "10.1"
 deviceName = "iPhone Simulator"
-app = "./build/DMProject.app"
+app = "./build/Dealing Matrix.zip"
 automationName = 'XCUITest'
 
 [appium_lib]
