@@ -83,12 +83,12 @@ RSpec.describe "Regression testing for DM ios client" do
   context "publish price" do
     it "check all buttons work" do
       button("发报价未选中").click
-      expect(button("线上资金")).to exist
-      expect(button("线下资金")).to exist
-      expect(button("理财")).to exist
-      expect(button("票据")).to exist
-      expect(button("非标资产")).to exist
-      expect(button("现券买卖")).to exist
+      expect(exists { button("线上") }).to be true
+      expect(exists { button("线下") }).to be true
+      expect(exists { button("理财") }).to be true
+      expect(exists { button("票据") }).to be true
+      expect(exists { button("非标资产") }).to be true
+      expect(exists { button("现券买卖") }).to be true
       button("关闭").click
     end
   end
